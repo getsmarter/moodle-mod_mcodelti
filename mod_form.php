@@ -170,14 +170,14 @@ class mod_mcodelti_mod_form extends moodleform_mod {
         $mform->setType('urlmatchedtypeid', PARAM_INT);
 
         $launchoptions = array();
-        $launchoptions[mcodelti_LAUNCH_CONTAINER_DEFAULT] = get_string('default', 'mcodelti');
-        $launchoptions[mcodelti_LAUNCH_CONTAINER_EMBED] = get_string('embed', 'mcodelti');
-        $launchoptions[mcodelti_LAUNCH_CONTAINER_EMBED_NO_BLOCKS] = get_string('embed_no_blocks', 'mcodelti');
-        $launchoptions[mcodelti_LAUNCH_CONTAINER_REPLACE_MOODLE_WINDOW] = get_string('existing_window', 'mcodelti');
-        $launchoptions[mcodelti_LAUNCH_CONTAINER_WINDOW] = get_string('new_window', 'mcodelti');
+        $launchoptions[MCODELTI_LAUNCH_CONTAINER_DEFAULT] = get_string('default', 'mcodelti');
+        $launchoptions[MCODELTI_LAUNCH_CONTAINER_EMBED] = get_string('embed', 'mcodelti');
+        $launchoptions[MCODELTI_LAUNCH_CONTAINER_EMBED_NO_BLOCKS] = get_string('embed_no_blocks', 'mcodelti');
+        $launchoptions[MCODELTI_LAUNCH_CONTAINER_REPLACE_MOODLE_WINDOW] = get_string('existing_window', 'mcodelti');
+        $launchoptions[MCODELTI_LAUNCH_CONTAINER_WINDOW] = get_string('new_window', 'mcodelti');
 
         $mform->addElement('select', 'launchcontainer', get_string('launchinpopup', 'mcodelti'), $launchoptions);
-        $mform->setDefault('launchcontainer', mcodelti_LAUNCH_CONTAINER_DEFAULT);
+        $mform->setDefault('launchcontainer', MCODELTI_LAUNCH_CONTAINER_DEFAULT);
         $mform->addHelpButton('launchcontainer', 'launchinpopup', 'mcodelti');
         $mform->setAdvanced('launchcontainer');
 
